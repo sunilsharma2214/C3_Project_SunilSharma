@@ -1,4 +1,4 @@
-import java.time.LocalDateTime;
+
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -61,6 +61,10 @@ public class Restaurant {
 
     public String getName() {
         return name;
+    }
+
+    public int getOrderValue(ArrayList<String> names){
+        return names.stream().mapToInt(name -> findItemByName(name).getPrice()).sum();
     }
 
 }

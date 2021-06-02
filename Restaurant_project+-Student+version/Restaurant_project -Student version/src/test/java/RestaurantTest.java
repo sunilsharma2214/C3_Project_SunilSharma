@@ -69,7 +69,11 @@ class RestaurantTest {
    @Test
    public void on_selecting_of_menu_items_should_return_order_value(){
     ArrayList<String> names = new ArrayList<String>();
-    restaurant.getOrderValue(names);
+    names.add("Sweet corn soup");
+    names.add("Vegetable lasagne");
+
+    assertEquals(restaurant.getOrderValue(names),388);
+ 
    }
   // <<<<<<<<<<<<<<<<<<<<<<<ORDER VALUE>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
