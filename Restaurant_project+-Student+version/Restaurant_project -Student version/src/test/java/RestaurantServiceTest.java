@@ -56,6 +56,7 @@ class RestaurantServiceTest {
 
   @Test
   public void add_restaurant_should_increase_list_of_restaurants_size_by_1() {
+    int initialNumberOfRestaurants = service.getRestaurants().size();
     service.addRestaurant(
         "Pumpkin Tales", "Chennai", LocalTime.parse("12:00:00"), LocalTime.parse("23:00:00"));
     assertEquals(initialNumberOfRestaurants + 1, service.getRestaurants().size());
