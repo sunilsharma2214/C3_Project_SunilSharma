@@ -1,6 +1,7 @@
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
+import java.util.ArrayList;
 
 import java.time.LocalTime;
 
@@ -63,4 +64,13 @@ class RestaurantTest {
     assertThrows(itemNotFoundException.class, () -> restaurant.removeFromMenu("French fries"));
   }
   // <<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+  // >>>>>>>>>>>>>>>>>>>>>>>>>>>ORDER VALUE<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+   @Test
+   public void on_selecting_of_menu_items_should_return_order_value(){
+    ArrayList<String> names = new ArrayList<String>();
+    restaurant.getOrderValue(names);
+   }
+  // <<<<<<<<<<<<<<<<<<<<<<<ORDER VALUE>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
 }
