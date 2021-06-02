@@ -1,4 +1,4 @@
-import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalTime;
@@ -10,7 +10,7 @@ class RestaurantServiceTest {
   RestaurantService service = new RestaurantService();
   Restaurant restaurant;
 
-  @BeforeAll
+  @BeforeEach
   public void setup() {
     LocalTime openingTime = LocalTime.parse("10:30:00");
     LocalTime closingTime = LocalTime.parse("22:00:00");

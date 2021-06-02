@@ -1,4 +1,4 @@
-import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 class RestaurantTest {
   Restaurant restaurant;
 
-  @BeforeAll
+  @BeforeEach
   public void setup() {
     LocalTime openingTime = LocalTime.parse("10:30:00");
     LocalTime closingTime = LocalTime.parse("22:00:00");
@@ -59,6 +59,7 @@ class RestaurantTest {
 
   @Test
   public void removing_item_that_does_not_exist_should_throw_exception() {
+    int initialMenuSize = restaurant.getMenu().size();
     assertThrows(itemNotFoundException.class, () -> restaurant.removeFromMenu("French fries"));
   }
   // <<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
