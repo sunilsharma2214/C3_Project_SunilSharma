@@ -66,11 +66,11 @@ class RestaurantTest {
   // <<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
   // >>>>>>>>>>>>>>>>>>>>>>>>>>>ORDER VALUE<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-//   @Test
-//   public void on_selecting_of_menu_items_should_return_order_value(){
-//    ArrayList<String> names = new ArrayList<String>();
-//    restaurant.getOrderValue(names);
-//   }
+   @Test
+   public void on_selecting_of_menu_items_should_return_order_value(){
+    ArrayList<String> names = new ArrayList<String>();
+    restaurant.getOrderValue(names);
+   }
   // <<<<<<<<<<<<<<<<<<<<<<<ORDER VALUE>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 }
